@@ -1,5 +1,7 @@
 package modelo.dao;
 
+import modelo.entidades.Cliente;
+
 /**
  * 
  * @author Diego Vargas
@@ -7,5 +9,9 @@ package modelo.dao;
  */
 
 public class DAOCliente {
+	
+	public Cliente crearCliente(String nombre, double dineroDisponible){
+		return new Cliente(nombre, dineroDisponible);
+	}
 
 }
