@@ -15,7 +15,7 @@ public class DAOCliente {
 	
 	private Cliente cliente;
 	
-	public Cliente crearCliente(String nombre, double dineroDisponible, ArrayList<Libro> listaLibrosCliente){
+	public static Cliente crearCliente(String nombre, double dineroDisponible, ArrayList<Libro> listaLibrosCliente){
 		return new Cliente(nombre, dineroDisponible, listaLibrosCliente);
 	}
 	

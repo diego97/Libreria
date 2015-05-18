@@ -4,7 +4,6 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
 public class DialogoCrearAutor extends JDialog{
 	
 	private static final long serialVersionUID = 1L;
