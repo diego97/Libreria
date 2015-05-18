@@ -5,12 +5,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import modelo.entidades.Libro;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.JsonReader;
+//import com.google.gson.Gson;
+//import com.google.gson.reflect.TypeToken;
+//import com.google.gson.stream.JsonReader;
 
 public class GestorArchivosJSON {
-	String formatoJSON;
+	/**String formatoJSON;
 	JsonReader jsonReader;
 
 	public GestorArchivosJSON(){
@@ -48,6 +48,6 @@ public class GestorArchivosJSON {
 
 		return libro;
 
-	}
+	}**/
 }
 
