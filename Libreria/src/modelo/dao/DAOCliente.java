@@ -18,5 +18,4 @@ public class DAOCliente {
 	public Libro comprarLibro(double dineroCliente){
 		return null;
 	}
-
 }

@@ -1,7 +1,6 @@
 package modelo.dao;
 
 import modelo.entidades.Autor;
-
 /**
  * 
  * @author Diego Vargas
