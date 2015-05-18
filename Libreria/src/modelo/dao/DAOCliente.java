@@ -17,10 +17,7 @@ public class DAOCliente {
 		return new Cliente(nombre, dineroDisponible);
 	}
 	
-	public Libro comprarLibro(double dineroCliente){
-		if (cliente.getDineroDisponible() >= dineroCliente) {
-			
-		}
+	public Libro comprarLibro(){
 		return null;
 	}
 }

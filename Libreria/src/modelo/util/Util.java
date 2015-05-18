@@ -3,6 +3,8 @@ package modelo.util;
 import java.io.File;
 
 import modelo.entidades.Cliente;
+import modelo.entidades.Libreria;
+import modelo.entidades.Libro;
 
 
 public class Util {
@@ -21,7 +23,7 @@ public class Util {
 		return new String[]{Integer.toString(cliente.getId()),cliente.getNombre(),
 				Double.toString(cliente.getDineroDisponible())};
 	}
-	public static  String getFileExtension(File file) {
+	public static String getFileExtension(File file) {
 		String name = file.getName();
 		String extension = null;
 		int i = name.lastIndexOf('.');

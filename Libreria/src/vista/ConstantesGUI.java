@@ -3,6 +3,7 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 
 public class ConstantesGUI {
+
 	/**
 	 * Constantes Ventana Principal
 	 */
@@ -32,6 +33,21 @@ public class ConstantesGUI {
 	public static final String T_IMAGEN = "Imagen";
 	public static final String BTN_CREAR = "Crear";
 	public static final String BTN_EDITAR = "Editar";
+
+	//Constantes tama�os
+	public static final int ANCHO_DIALOGO = 300;
+	public static final int ALTO_DIALOGO = 700;
+	
+	//Cosntantes Titulos
+	public static final String T_CREAR_LIBRO = "Crear Libro";
+	
+	//Constantes labels
+	public static final String T_ID = "Id:";
+	public static final String T_EDITORIAL = "Editorial:";
+	public static final String T_AUTOR = "Autor:";
+	public static final String T_GENERO = "Genero:";
+	public static final String T_PORTADA = "Portada:";
+
 
 	/**
 	 * Fuentes
