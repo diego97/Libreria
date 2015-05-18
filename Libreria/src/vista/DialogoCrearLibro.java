@@ -35,14 +35,14 @@ public class DialogoCrearLibro extends JDialog{
 		setSize(ConstantesGUI.ANCHO_DIALOGO, ConstantesGUI.ALTO_DIALOGO);
 		setLayout(null);
 		setLocationRelativeTo(null);
-		//setModal(true);
+		setModal(true);
 		
 		lbId = new JLabel(ConstantesGUI.T_ID);
 		lbId.setBounds(30, 50, 100, 50);
 		add(lbId);
 		
 		txId = new JTextField();
-		txId.setBounds(100, 50, 100, 50);
+		txId.setBounds(100, 60, 100, 25);
 		add(txId);
 	}
 	

@@ -3,7 +3,7 @@ package vista;
 public class ConstantesGUI {
 	
 	//Constantes tamaños
-	public static final int ANCHO_DIALOGO = 300;
+	public static final int ANCHO_DIALOGO = 500;
 	public static final int ALTO_DIALOGO = 700;
 	
 	//Cosntantes Titulos

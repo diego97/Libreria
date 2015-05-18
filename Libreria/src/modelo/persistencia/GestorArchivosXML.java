@@ -16,7 +16,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import modelo.entidades.Libro;
-import modelo.entidades.SitioTuristico;
 
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
@@ -84,8 +83,8 @@ public class GestorArchivosXML {
 		}
 	}
 
-	public static SitioTuristico importarArchivoXMl(){
-		SitioTuristico sitio = null;
+	/**public static Libro importarArchivoXMl(){
+		Libro sitio = null;
 		File archivo = null;
 		JFileChooser jf = new JFileChooser("/PROGRAMACION/Proyectos/GestorDeTurismo/src/files");
 		int option = jf.showOpenDialog(null);
@@ -101,14 +100,7 @@ public class GestorArchivosXML {
 				documento.getDocumentElement().normalize();
 				Element doc = documento.getDocumentElement();
 				NodeList lista = doc.getChildNodes();
-				sitio = new SitioTuristico(lista.item(0).getTextContent(), 
-					lista.item(1).getTextContent(), Double.parseDouble(lista.item(2).getTextContent()),
-						lista.item(3).getTextContent());
-				sitio.setId(Integer.parseInt(doc.getAttribute(ID)));
-				int visitas1 =  Integer.parseInt(lista.item(4).getTextContent());
-				int visitas2 =  Integer.parseInt(lista.item(5).getTextContent());
-				int[] visitas = {visitas1, visitas2};
-				sitio.setNumeroVisitas(visitas);
+				sitio = new Libro(Integer.parseInt(lista.item(0).getTextContent()), lista.item(1)getTextContent() , lista.item(2)getTextContent(), (Autor)lista.item(3)getTextContent(), lista.item(4)getTextContent(), lista.item(5)getTextContent(), lista.item(6)getTextContent(), lista.item(7)getTextContent(), lista.item(8)getTextContent());
 			} catch (SAXException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -118,5 +110,5 @@ public class GestorArchivosXML {
 			e.printStackTrace();
 		}
 		return sitio;
-	}
+	}**/
 }
