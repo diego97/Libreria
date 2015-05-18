@@ -20,6 +20,14 @@ public class Libreria {
 		}
 		throw new Exception("no se encuentra el cliente");
 	}
+	public Libro  BuscarLibro(int nit) throws Exception{
+		for (Libro libro : listaLibros) {
+			if (libro.getId() == nit) {
+				return libro;
+			}
+		}
+		throw new Exception("no se encuentra el libro");
+	}
 	public ArrayList<Libro> generarTopLibros(ArrayList<Libro> listaLibros){
 		return listaLibros;
 	}
@@ -35,12 +43,7 @@ public class Libreria {
 	public void eliminarLibro(Libro libro){
 		listaLibros.remove(libro);
 	}
-	public  Cliente crearCliente(String nombre, double dineroDisponible){
-		return new Cliente(nombre, dineroDisponible);
-	}
-	public Libro crearLibro(){
-		return new Libro();
-	}
+	
 	public void editarCliente(Cliente clienteViejo, Cliente clienteNuevo){
 		listaClientes.set(listaClientes.indexOf(clienteViejo),clienteNuevo);
 	}
