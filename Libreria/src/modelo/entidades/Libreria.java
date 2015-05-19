@@ -10,6 +10,7 @@ public class Libreria {
 
 		listaLibros = new ArrayList<Libro>();
 		listaClientes = new ArrayList<Cliente>();
+		
 	}
 
 	public Cliente  BuscarCliente(int id) throws Exception{
@@ -50,4 +51,21 @@ public class Libreria {
 	public void editarLibro(Libro libroViejo, Libro libroNuevo){
 		listaLibros.set(listaLibros.indexOf(libroViejo),libroNuevo);
 	}
+
+	public ArrayList<Libro> getListaLibros() {
+		return listaLibros;
+	}
+
+	public void setListaLibros(ArrayList<Libro> listaLibros) {
+		this.listaLibros = listaLibros;
+	}
+
+	public ArrayList<Cliente> getListaClientes() {
+		return listaClientes;
+	}
+
+	public void setListaClientes(ArrayList<Cliente> listaClientes) {
+		this.listaClientes = listaClientes;
+	}
+	
 }

@@ -1,38 +1,20 @@
 package vista;
+import java.awt.Checkbox;
 import java.awt.Color;
-import java.awt.GridLayout;
-import java.awt.Rectangle;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.channels.FileChannel;
-import java.util.LinkedList;
+import java.awt.FlowLayout;
+import java.util.ArrayList;
 
-import javafx.stage.FileChooser;
-
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
-import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.UIManager;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.DefaultCaret;
+import javax.swing.event.ChangeListener;
 
 import modelo.dao.DAOCliente;
 import modelo.entidades.Cliente;
-import modelo.util.Util;
+import modelo.entidades.Libro;
 import controlador.Controlador;
 
 public class DialogoCrearCliente extends JDialog {
@@ -46,8 +28,9 @@ public class DialogoCrearCliente extends JDialog {
 	private JLabel lbLibros;
 	private JButton btnCrearCliente;
 	private Controlador controlador;
-	private Cliente sitioTuristico;
-
+	private Cliente cliente;
+	private JPanel p1;
+	private JCheckBox[]  listaCheckboxsLibros;
 
 	public DialogoCrearCliente(VentanaInicial ventanaPrincipal, Controlador controlador) {
 		super(ventanaPrincipal);
@@ -58,7 +41,16 @@ public class DialogoCrearCliente extends JDialog {
 		setLocationRelativeTo(null);
 		setLayout(null);
 		setBackground(Color.black);
-
+		//prueba
+		ArrayList<Libro> listaLibros = new ArrayList<Libro>();
+		listaLibros.add(new Libro(0, "213123", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaLibros.add(new Libro(0, "qweq", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaLibros.add(new Libro(0, "qw2321323q", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaLibros.add(new Libro(0, "qwefcdsfq", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaLibros.add(new Libro(0, "qwe9999q", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaLibros.add(new Libro(0, "qwevcbvnq", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaLibros.add(new Libro(0, "qweqqwew11222", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaCheckboxsLibros = new JCheckBox[listaLibros.size()]; 
 		lbNombre = new JLabel(ConstantesGUI.T_NOMBRE);
 		lbNombre.setBounds(100, 50, 100, 50);
 
@@ -95,8 +87,17 @@ public class DialogoCrearCliente extends JDialog {
 		btnCrearCliente.setContentAreaFilled(false);
 		add(btnCrearCliente);
 
+		p1 = new JPanel(); 
+		p1.setLayout(new FlowLayout());
+		p1.setBackground(Color.blue);
+		p1.setBounds(200, 200, 200, 200);
+		for( int i=0; i<listaLibros.size() ; i++){
+			listaCheckboxsLibros[i] = new JCheckBox(listaLibros.get(i).getNombre());
+			listaCheckboxsLibros[i].addChangeListener(controlador);
+			p1.add( listaCheckboxsLibros[i] );
+		}
+		add(p1); 
 	}
-
 	public Cliente CrearSitio(){
 		dispose();
 
@@ -118,8 +119,15 @@ public class DialogoCrearCliente extends JDialog {
 	public void setTxValor(JTextField txValor) {
 		this.txDinero = txValor;
 	}
+	
 
 
+	public JCheckBox[] getListaCheckboxsLibros() {
+		return listaCheckboxsLibros;
+	}
+	public void setListaCheckboxsLibros(JCheckBox[] listaCheckboxsLibros) {
+		this.listaCheckboxsLibros = listaCheckboxsLibros;
+	}
 	public static void main(String[] args) {
 		DialogoCrearCliente d = new DialogoCrearCliente(null, null);
 		d.setVisible(true);
