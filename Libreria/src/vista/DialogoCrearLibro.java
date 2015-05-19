@@ -6,7 +6,6 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import controlador.Controlador;
 import modelo.entidades.Autor;
 import modelo.entidades.EnumGeneroLibro;
 
