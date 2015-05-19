@@ -111,6 +111,7 @@ public class DialogoCrearLibro extends JDialog{
 		DAOLibro.crearLibro(txNombre.getText(), txEditorial.getText(), (Autor)boxAutor.getSelectedItem(), 
 				Double.parseDouble(txValor.getText()), (EnumGeneroLibro)boxGenero.getSelectedItem(), 
 				lbRuta.getText(), 0);
+		dispose();
 	}
 	
 	public static void main(String[] args) {
