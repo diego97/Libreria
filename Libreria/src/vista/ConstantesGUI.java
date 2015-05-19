@@ -39,6 +39,8 @@ public class ConstantesGUI {
 	
 	//Cosntantes Titulos
 	public static final String T_CREAR_LIBRO = "Crear Libro";
+	public static final String T_CREAR_AUTOR = "Crear Autor";
+	public static final String T_CANCELAR = "Cancelar";
 	
 	//Constantes labels
 	public static final String T_ID = "Id:";

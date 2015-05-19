@@ -28,6 +28,8 @@ public class DialogoCrearLibro extends JDialog{
 	private JLabel lbPortada;
 	private JButton btnSubirImagenPortada;
 	private JLabel lbRuta;
+	private JButton btnCrearLibro;
+	private JButton btnCancelar;
 	
 	public DialogoCrearLibro() {
 		setTitle(ConstantesGUI.T_CREAR_LIBRO);
@@ -95,6 +97,14 @@ public class DialogoCrearLibro extends JDialog{
 		lbRuta = new JLabel("holl");
 		lbRuta.setBounds(300, 345, 100, 50);
 		add(lbRuta);
+		
+		btnCrearLibro = new JButton(ConstantesGUI.T_CREAR_LIBRO);
+		btnCrearLibro.setBounds(350, 500, 100, 30);
+		add(btnCrearLibro);
+		
+		btnCancelar = new JButton(ConstantesGUI.T_CANCELAR);
+		btnCancelar.setBounds(50, 500, 100, 30);
+		add(btnCancelar);
 	}
 	
 	public static void main(String[] args) {
