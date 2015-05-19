@@ -7,15 +7,13 @@ public class Libro {
 	private String nombre;
 	private String editorial;
 	private Autor autor;
-	private Date fechaPublicacion;
 	private Double valor;
 	private EnumGeneroLibro genero;
 	private String imagenPortada;
 	private int copiasVendidas;
 	private static int consecutivo;
-		
-	public Libro(int id, String nombre, String editorial, Autor autor,
-			Date fechaPublicacion, double valor, EnumGeneroLibro genero,
+
+	public Libro(int id, String nombre, String editorial, Autor autor, double valor, EnumGeneroLibro genero,
 			String imagenPortada, int copiasVendidas) {
 		super();
 		this.id = id;
@@ -23,13 +21,14 @@ public class Libro {
 		this.nombre = nombre;
 		this.editorial = editorial;
 		this.autor = autor;
-		this.fechaPublicacion = fechaPublicacion;
 		this.valor = valor;
 		this.genero = genero;
 		this.imagenPortada = imagenPortada;
 		this.copiasVendidas = copiasVendidas;
 	}
+
 	
+
 	public int getId() {
 		return id;
 	}
@@ -54,12 +53,7 @@ public class Libro {
 	public void setAutor(Autor autor) {
 		this.autor = autor;
 	}
-	public Date getFechaPublicacion() {
-		return fechaPublicacion;
-	}
-	public void setFechaPublicacion(Date fechaPublicacion) {
-		this.fechaPublicacion = fechaPublicacion;
-	}
+
 	public Double getValor() {
 		return valor;
 	}
@@ -84,6 +78,4 @@ public class Libro {
 	public void setCopiasVendidas(int copiasVendidas) {
 		this.copiasVendidas = copiasVendidas;
 	}
-	
-	}
-
+}

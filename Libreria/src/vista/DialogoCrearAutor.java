@@ -40,5 +40,4 @@ public class DialogoCrearAutor extends JDialog{
 		DialogoCrearAutor di = new DialogoCrearAutor();
 		di.setVisible(true);
 	}
-
 }

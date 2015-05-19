@@ -4,6 +4,10 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 
+import javax.swing.JFileChooser;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
@@ -43,13 +47,13 @@ public class DialogoCrearCliente extends JDialog {
 		setBackground(Color.black);
 		//prueba
 		ArrayList<Libro> listaLibros = new ArrayList<Libro>();
-		listaLibros.add(new Libro(0, "213123", "eqqwe", null, null, 34543, null, "erewrwe", 43));
-		listaLibros.add(new Libro(0, "qweq", "eqqwe", null, null, 34543, null, "erewrwe", 43));
-		listaLibros.add(new Libro(0, "qw2321323q", "eqqwe", null, null, 34543, null, "erewrwe", 43));
-		listaLibros.add(new Libro(0, "qwefcdsfq", "eqqwe", null, null, 34543, null, "erewrwe", 43));
-		listaLibros.add(new Libro(0, "qwe9999q", "eqqwe", null, null, 34543, null, "erewrwe", 43));
-		listaLibros.add(new Libro(0, "qwevcbvnq", "eqqwe", null, null, 34543, null, "erewrwe", 43));
-		listaLibros.add(new Libro(0, "qweqqwew11222", "eqqwe", null, null, 34543, null, "erewrwe", 43));
+		listaLibros.add(new Libro(0, "s213123sfd", "dsdfs", null, 2432, null, "wdff", 32));
+		listaLibros.add(new Libro(0, "s33332332sfd", "dsdfs", null, 2432, null, "wdff", 32));
+		listaLibros.add(new Libro(0, "s2323ewsfd", "dsdfs", null, 2432, null, "wdff", 32));
+		listaLibros.add(new Libro(0, "swewsfd", "dsdfs", null, 2432, null, "wdff", 32));
+		listaLibros.add(new Libro(0, "ssqqqqqqfd", "dsdfs", null, 2432, null, "wdff", 32));
+		listaLibros.add(new Libro(0, "sswwwwwwfd", "dsdfs", null, 2432, null, "wdff", 32));
+		listaLibros.add(new Libro(0, "wwwwssfd", "dsdfs", null, 2432, null, "wdff", 32));
 		listaCheckboxsLibros = new JCheckBox[listaLibros.size()]; 
 		lbNombre = new JLabel(ConstantesGUI.T_NOMBRE);
 		lbNombre.setBounds(100, 50, 100, 50);
@@ -100,7 +104,6 @@ public class DialogoCrearCliente extends JDialog {
 	}
 	public Cliente CrearSitio(){
 		dispose();
-
 		return DAOCliente.crearCliente(txNombre.getText(), Double.parseDouble(txDinero.getText()), null);
 	}
 
@@ -129,7 +132,7 @@ public class DialogoCrearCliente extends JDialog {
 		this.listaCheckboxsLibros = listaCheckboxsLibros;
 	}
 	public static void main(String[] args) {
-		DialogoCrearCliente d = new DialogoCrearCliente(null, null);
-		d.setVisible(true);
+		DialogoCrearCliente cli = new DialogoCrearCliente(null, null);
+		cli.setVisible(true);
 	}
 }
