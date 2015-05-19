@@ -22,7 +22,7 @@ import controlador.Controlador;
 public class DialogoCrearCliente extends JDialog {
 
 	private static final long serialVersionUID = 1L;
-	public static final String TITULO = "Crear Sitio Turistico";
+	public static final String TITULO = "Crear Cliente";
 	private JLabel lbNombre;
 	private JLabel lbValor;
 	private JTextField txNombre;
