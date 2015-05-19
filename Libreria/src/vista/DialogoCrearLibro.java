@@ -6,6 +6,7 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import modelo.dao.DAOLibro;
 import modelo.entidades.Autor;
 import modelo.entidades.EnumGeneroLibro;
 
@@ -104,6 +105,12 @@ public class DialogoCrearLibro extends JDialog{
 		btnCancelar = new JButton(ConstantesGUI.T_CANCELAR);
 		btnCancelar.setBounds(50, 500, 100, 30);
 		add(btnCancelar);
+	}
+	
+	public void crearLibro(){
+		DAOLibro.crearLibro(txNombre.getText(), txEditorial.getText(), (Autor)boxAutor.getSelectedItem(), 
+				Double.parseDouble(txValor.getText()), (EnumGeneroLibro)boxGenero.getSelectedItem(), 
+				lbRuta.getText(), 0);
 	}
 	
 	public static void main(String[] args) {

@@ -13,7 +13,7 @@ import java.io.OutputStream;
 import java.nio.channels.FileChannel;
 import java.util.LinkedList;
 
-import javafx.stage.FileChooser;
+import javax.swing.JFileChooser;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -99,7 +99,6 @@ public class DialogoCrearCliente extends JDialog {
 
 	public Cliente CrearSitio(){
 		dispose();
-
 		return DAOCliente.crearCliente(txNombre.getText(), Double.parseDouble(txDinero.getText()), null);
 	}
 
@@ -121,7 +120,7 @@ public class DialogoCrearCliente extends JDialog {
 
 
 	public static void main(String[] args) {
-		DialogoCrearCliente d = new DialogoCrearCliente(null, null);
-		d.setVisible(true);
+		DialogoCrearCliente cli = new DialogoCrearCliente(null, null);
+		cli.setVisible(true);
 	}
 }
