@@ -1,5 +1,7 @@
 package modelo.dao;
 
+import java.util.ArrayList;
+
 import modelo.entidades.Cliente;
 import modelo.entidades.Libro;
 
@@ -13,8 +15,8 @@ public class DAOCliente {
 	
 	private Cliente cliente;
 	
-	public Cliente crearCliente(String nombre, double dineroDisponible){
-		return new Cliente(nombre, dineroDisponible);
+	public Cliente crearCliente(String nombre, double dineroDisponible, ArrayList<Libro> listaLibrosCliente){
+		return new Cliente(nombre, dineroDisponible, listaLibrosCliente);
 	}
 	
 	public Libro comprarLibro(){
